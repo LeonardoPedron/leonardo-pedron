@@ -48,16 +48,17 @@ let app = new Vue({
           toast.addEventListener('mouseenter', Swal.stopTimer)
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         },
+        willClose: () => {
+          window.open(`${text}`, '_blank');
+        }
       });
       
       Toast.fire({
         icon: 'success',
-        title: `Copiato con successo link di "${dictionary[`${element}`]}"`
+        title: `Tra 2s verrai indirizzato all pagina di "${dictionary[`${element}`]}"`
       });
 
-      window.setTimeout(function() {
-        window.open(`${text}`, '_blank');
-      }, 2000);
+      
     }
   },
 })

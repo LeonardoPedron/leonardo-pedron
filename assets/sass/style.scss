@@ -1,0 +1,55 @@
+@import '_var';
+@import '_regular';
+
+.overlay{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(214, 214, 214), rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
+    opacity: 0.4;
+    position: absolute;
+}
+
+.container{
+    position: relative;
+    .box{
+        width: 70%;
+        height: 50vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, +50%);
+        
+        
+        .box-img{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            img{ 
+                width: 300px; 
+                height: 300px; 
+                border: 4px solid $link;
+            }
+        }
+
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid $link;
+            .button{
+                margin: 0 10px 0 10px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+    
+                a{color: black;}
+                a:hover{color: $link;}
+            }
+        }
+    }
+}

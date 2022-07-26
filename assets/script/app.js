@@ -37,7 +37,7 @@ let app = new Vue({
         '3': 'Gmail'
       }
 
-      navigator.clipboard.writeText(text.split(':')[1]);
+      navigator.clipboard.writeText(text);
       const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',

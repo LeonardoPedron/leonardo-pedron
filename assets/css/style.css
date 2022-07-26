@@ -65,9 +65,9 @@ body {
   align-items: center;
   cursor: pointer;
 }
-.container .box .icon .button a {
+.container .box .icon .button i {
   color: black;
 }
-.container .box .icon .button a:hover {
+.container .box .icon .button i:hover {
   color: rgb(128, 163, 134);
 }/*# sourceMappingURL=style.css.map */

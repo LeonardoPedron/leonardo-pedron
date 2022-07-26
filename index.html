@@ -26,9 +26,9 @@
             </div>
             <div class="col-md mt-2 bg-light rounded-2 icon">
               <div v-for="(item, index) in icons" :key="index" class="button" @click="copyText(index)">
-                <a :href="item.http" target="_blank" :data-key="index" rel="noopener noreferrer">
+                <div :data-href="item.http" target="_blank" :data-key="index">
                   <i :class="item.icon"></i>
-                </a>
+                </div>
               </div>
             </div>
             <div class="col-md">

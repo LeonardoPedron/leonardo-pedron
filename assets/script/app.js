@@ -29,7 +29,7 @@ let app = new Vue({
   },
   methods: {
     copyText: function (element) {
-      let text = document.querySelector(`a[data-key="${element}"]`).href;
+      let text = document.querySelector(`div[data-key="${element}"]`).dataset.href;
       let dictionary = {
         '0': 'GitHub',
         '1': 'Instagram',
@@ -48,12 +48,16 @@ let app = new Vue({
           toast.addEventListener('mouseenter', Swal.stopTimer)
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         },
-      })
+      });
       
       Toast.fire({
         icon: 'success',
         title: `Copiato con successo link di "${dictionary[`${element}`]}"`
-      })
+      });
+
+      window.setTimeout(function() {
+        window.open(`${text}`, '_blank');
+      }, 2000);
     }
   },
 })

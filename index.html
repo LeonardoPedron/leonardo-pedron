@@ -10,17 +10,21 @@
     <!-- CDN FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Costum Style.css -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Script CDN Vue.js-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <!-- Script CDN sweetalert 2 Library -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
-  <body>
+  <body data-speed="5">
     <div class="overlay"></div>
     <div id="app" class="container">
         <div class="box text-center">
-          <div class="box-img"><img :src="url" :alt="alt" class="rounded-circle"></div>
+          <div class="box-img">
+            <img :src="url" :alt="alt" class="rounded-circle">
+            <div class="spinner-border text-dark" style="width: 300px; height: 300px;position: absolute;" role="status">
+            </div>
+          </div>
           <h1 class="text-light mt-3">{{ title }}</h1>
           <div class="row">
             <div class="col-md">
@@ -36,14 +40,12 @@
             </div>
           </div>
           <footer class="mt-5 text-center">
-            ©2022-2023 Pedron Leonardo
+            ©{{year}}-{{year+1}} Pedron Leonardo
           </footer>   
     </div>
     
-
     <!-- Costum JavaScriptFile -->
-    <script src="./assets/script/app.min.js"></script>
-
+    <script src="./assets/script/app.js"></script>
     <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>

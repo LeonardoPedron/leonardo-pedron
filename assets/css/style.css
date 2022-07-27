@@ -49,6 +49,9 @@ body {
   height: 300px;
   border: 4px solid #80a386;
 }
+.container .box .box-img .spinner-border {
+  animation-duration: 15s;
+}
 .container .box .icon {
   display: flex;
   align-items: center;
@@ -67,7 +70,10 @@ body {
 }
 .container .box .icon .button i {
   color: black;
+  transition: font-size 0.2s;
+  transition-timing-function: ease;
 }
 .container .box .icon .button i:hover {
   color: #80a386;
+  font-size: 48px;
 }/*# sourceMappingURL=style.css.map */

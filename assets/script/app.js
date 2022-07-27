@@ -4,6 +4,7 @@ let app = new Vue({
     title: 'Leonardo Pedron',
     url: 'https://avatars.githubusercontent.com/u/106034227?v=4',
     alt: 'Immagine Profilo Leonardo Pedron',
+    year: '',
     icons: [
       {
         http: 'https://github.com/LeonardoPedron',
@@ -27,6 +28,9 @@ let app = new Vue({
       },
     ]
   },
+  mounted() {
+    this.getDateYears()
+  },
   methods: {
     copyText: function (element) {
       let text = document.querySelector(`div[data-key="${element}"]`).dataset.href;
@@ -45,7 +49,6 @@ let app = new Vue({
         timer: 2000,
         timerProgressBar: true,
         didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         },
         willClose: () => {
@@ -57,8 +60,11 @@ let app = new Vue({
         icon: 'success',
         title: `Tra 2s verrai indirizzato all pagina di "${dictionary[`${element}`]}"`
       });
-
-      
+    },
+    getDateYears: function(){
+      let date = new Date();
+      this.year = date.getFullYear();
     }
+
   },
 })

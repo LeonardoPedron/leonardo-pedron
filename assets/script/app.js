@@ -10,10 +10,10 @@ let app = new Vue({
         http: 'https://github.com/LeonardoPedron',
         icon: 'fa-brands fa-github display-6'
       },
-      /*{
-          http: '',
+      {
+          http: 'https://www.linkedin.com/in/leonardo-pedron/',
           icon: 'fa-brands fa-linkedin display-6'
-      },*/
+      },
       {
         http: 'https://www.instagram.com/pedronleonardo/',
         icon: 'fa-brands fa-instagram display-6'

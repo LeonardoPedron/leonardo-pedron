@@ -36,9 +36,10 @@ let app = new Vue({
       let text = document.querySelector(`div[data-key="${element}"]`).dataset.href;
       let dictionary = {
         '0': 'GitHub',
-        '1': 'Instagram',
-        '2': 'Twitter',
-        '3': 'Gmail'
+        '1': 'Linkedin',
+        '2': 'Instagram',
+        '3': 'Twitter',
+        '4': 'Gmail'
       }
 
       navigator.clipboard.writeText(text);
